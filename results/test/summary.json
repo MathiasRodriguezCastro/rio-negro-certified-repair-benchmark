@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "split": "test",
+  "attempts": 48,
+  "methods": {
+    "taylor": {
+      "attempted": 12,
+      "converged": 12,
+      "admissible": 0
+    },
+    "derivative": {
+      "attempted": 12,
+      "converged": 12,
+      "admissible": 12
+    },
+    "interval": {
+      "attempted": 12,
+      "converged": 12,
+      "admissible": 12
+    },
+    "candidate": {
+      "attempted": 12,
+      "converged": 12,
+      "admissible": 12
+    }
+  },
+  "reuse_attempts": 144,
+  "reuse_changed": 36,
+  "configuration_sha256": "36a03c14917ab7ced61847fbb531870a4417dbcee61f3c9d3a8d060bb41b3c29",
+  "python": "3.10.12",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3"
+}

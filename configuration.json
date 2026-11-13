@@ -1,0 +1,49 @@
+{
+  "seed": 20261113,
+  "periods": 24,
+  "plants": 3,
+  "development": 3,
+  "test": 12,
+  "radius": 0.08,
+  "margin": 0.04,
+  "interval_subdivisions": 4,
+  "time_step": 0.2,
+  "xmax": 1.0,
+  "ymax": 0.8,
+  "vmin": 2.0,
+  "vmax": 6.0,
+  "coefficients": [
+    [
+      1.25,
+      0.12,
+      -0.006,
+      -0.08,
+      0.0
+    ],
+    [
+      1.9,
+      -0.08,
+      0.003,
+      -0.07,
+      0.0
+    ],
+    [
+      1.45,
+      0.1,
+      -0.004,
+      -0.08,
+      0.006
+    ]
+  ],
+  "failure_cost": 100.0,
+  "water_values": [
+    1.2,
+    1.6,
+    2.0
+  ],
+  "mip_time_limit_s": 30.0,
+  "mip_relative_gap": 1e-07,
+  "lp_tolerance": 1e-09,
+  "point_tolerance": 1e-07,
+  "coordination_variants": 6
+}

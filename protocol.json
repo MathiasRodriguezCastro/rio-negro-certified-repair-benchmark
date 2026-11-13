@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-13",
+  "configuration_sha256": "36a03c14917ab7ced61847fbb531870a4417dbcee61f3c9d3a8d060bb41b3c29",
+  "benchmark_sha256": "5c321866431c0db81bd4a6ef2814261c8f506cc22ba323f3e4e3d8dfd4759818",
+  "development_summary_sha256": "e3cee58f38fbbbe556b769c7f9f876b5adb34a1eb35978a9778267d9b92364ee",
+  "development_cases": 3,
+  "test_cases": 12,
+  "purpose": "Independent synthetic verification of finite-candidate certificates and repeated coordination; not a replacement for the restricted 10000-case validation",
+  "primary_methods": [
+    "taylor",
+    "derivative",
+    "interval",
+    "candidate"
+  ],
+  "method_order": "Four-position cycle over the 12 fixed test identifiers",
+  "reuse": "Six coordination problems per valid candidate baseline; cached/rebuilt order alternates by scenario and variant. Both paths use fresh scipy.linprog calls; only certificate construction differs.",
+  "parameters_retuned_on_test": false,
+  "dependencies": {
+    "python": "3.10.12",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3"
+  },
+  "implementation_correction": {
+    "previous_benchmark_sha256": "932df068f78328ba75210900255180a93b3a82f1033f85c94f26bf34d3066b4e",
+    "corrected_benchmark_sha256": "5c321866431c0db81bd4a6ef2814261c8f506cc22ba323f3e4e3d8dfd4759818",
+    "description": "Use actual P_xy=d+4*e*x+2*e*y in derivative bound, checked by an exact finite-difference Hessian test. Earlier exported bounds also passed full-box rational verification. All small comparisons are regenerated; inputs, MILP starts and every configuration parameter are unchanged.",
+    "prospectively_untouched_statistical_test_claim": false
+  }
+}
