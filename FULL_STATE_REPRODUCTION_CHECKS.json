@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "version": "1.1.0",
+  "original_replay": {
+    "status": "passed",
+    "initial_MILP_witnesses_verified": 12,
+    "independent_full_box_rational_checks": 2592,
+    "raw_quality_points_audited": 48,
+    "raw_coordination_points_audited": 144,
+    "taylor_outputs_with_unsupported_service": 12,
+    "replayed_LP_solves": 192,
+    "regenerated_MILPs": 0,
+    "proprietary_solver_required": false,
+    "proprietary_modules_loaded": false,
+    "inherited_data_or_code_required": false,
+    "network_access_required": false,
+    "python": "3.10.12",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3"
+  },
+  "full_state_LP_replays": 36,
+  "total_LP_replays": 228,
+  "full_state_exact_rows": 2592,
+  "total_exact_rows": 5184,
+  "full_state_points": 36,
+  "state_interior_exported_rows": 0,
+  "essential_interior_volume_witness_verified": true,
+  "maximum_candidates_per_plant": [
+    8,
+    12,
+    12
+  ],
+  "fixed_and_full_domains_identical": true,
+  "proprietary_solver_required": false,
+  "inherited_data_or_code_required": false,
+  "network_access_required": false,
+  "python": "3.10.12",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3"
+}

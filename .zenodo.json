@@ -1,9 +1,9 @@
 {
   "title": "Synthetic certified hydropower repair benchmark",
   "upload_type": "software",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "publication_date": "2026-11-13",
-  "description": "Independent synthetic benchmark accompanying Certified Affine Production Bounds for Local Hydropower Schedule Repair in the Rio Negro Cascade. Includes three development cases and twelve fixed verification examples, generated inputs and initial MILP witnesses, exact-rational certificate checks and open-source replay of 192 LP solves. New coefficients retain the same polynomial family; no restricted real-bank inputs or inherited native code are included. The protocol records an implementation correction and does not claim prospectively untouched statistical validation.",
+  "description": "Independent synthetic benchmark accompanying Certified Affine Production Bounds for Local Hydropower Schedule Repair in the Rio Negro Cascade. Includes three development cases and twelve fixed verification examples, generated inputs and initial MILP witnesses, exact-rational certificate checks and open-source replay of 192 LP solves. New coefficients retain the same polynomial family; no restricted real-bank inputs or inherited native code are included. The protocol records an implementation correction and does not claim prospectively untouched statistical validation. Version 1.1.0 additionally verifies full Taylor storage derivatives, eight/twelve/twelve finite candidates, an essential interior-volume witness and matched fixed/full affine comparisons. The 192 original LP replays are retained and 36 full-state LPs added.",
   "creators": [
     {
       "name": "Rodriguez Castro, Mathias",

@@ -1,0 +1,21 @@
+{
+  "version": "1.1.0",
+  "frozen_at": "2026-11-13T22:45:07.938341+00:00",
+  "implementation_sha256": "82916efb1a2f151f7403e2af825605b2b21df00b34d0352464b08aea3395c9d8",
+  "configuration_sha256": "7976185018e6b17e7593a5a3b224540d40501e27d2facab053cfa1bc17681bbe",
+  "original_protocol_sha256": "4c3f68c2a279cb5c03d4ab57f972711ac91f9e6eabc36e9bade547555b69b364",
+  "original_case_count": 12,
+  "methods": [
+    "derivative",
+    "interval",
+    "candidate"
+  ],
+  "subdivisions": [
+    4,
+    4,
+    2
+  ],
+  "all_boxes_and_MILP_starts_unchanged": true,
+  "parameter_selection": false,
+  "prospectively_untouched": false
+}

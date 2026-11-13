@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "cases": 12,
+  "LP_solves": 36,
+  "admissible": 36,
+  "exact_exported_rows": 2592,
+  "candidate_counts_by_plant": [
+    8,
+    12,
+    12
+  ],
+  "paired_with_original_fixed_storage": true,
+  "configuration": {
+    "version": "1.1.0",
+    "methods": [
+      "derivative",
+      "interval",
+      "candidate"
+    ],
+    "subdivisions": [
+      4,
+      4,
+      2
+    ],
+    "radius": 0.08,
+    "margin": 0.04,
+    "boxes": "exactly those of the supplied fixed-storage candidate rows",
+    "statistical_scope": "retrospective reproducibility examples, not new independent test data"
+  }
+}

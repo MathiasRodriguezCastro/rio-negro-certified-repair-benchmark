@@ -1,36 +1,63 @@
-# Synthetic certified hydropower repair benchmark
+# Synthetic certified hydropower repair benchmark v1.1.0
 
-This self-contained example accompanies *Certified Affine Production Bounds for
-Local Hydropower Schedule Repair in the Río Negro Cascade*. Everything in this
-directory is newly written or synthetically generated. The code, documentation
-and generated data in this directory are distributed under the included MIT
-license. This license does **not** apply to any historical Río Negro material.
-Third-party dependencies retain their own licenses and are installed separately.
-
-There are no measured profiles, Río Negro coefficients, inherited native sources,
-network weights, licensed solvers or external project imports. Python 3.10.12,
-NumPy 2.2.6 and SciPy 1.15.3 were used. Python 3.10 or later is required. HiGHS
-comes through SciPy; no separate commercial installation is needed.
+This MIT-licensed standalone package accompanies *Certified Affine Production
+Bounds for Local Hydropower Schedule Repair in the Río Negro Cascade*. Code,
+inputs and initial MILP witnesses are independently written or synthetically
+generated. No Río Negro coefficients, real-bank scenarios, inherited native
+classes, network weights or proprietary solvers are distributed here.
+Third-party dependencies retain their own licenses.
 
 ```bash
 python3 -m pip install -r requirements.txt
-python3 reproduce.py
+python3 reproduce_full_state.py
 ```
 
-The default replay checks every saved input and MILP witness, independently
-verifies every certified affine row on its full box with exact rational
-arithmetic, audits all returned points, and reruns the 192 small LPs from the
-supplied initial dispatches. It compares costs and mathematical certificates;
-elapsed times are observations and are not expected to reproduce exactly.
-For a saved-output audit without new optimization, use:
+Python 3.10 or later, NumPy and SciPy/HiGHS suffice. Replay needs no network or
+external project directory. The new entry point retains the original 192-LP
+replay and adds 36 full-state LPs: 228 solves, 5,184 independently checked rational
+whole-box production rows, and all 12 complete initial MILP witnesses. To check
+saved outputs without rerunning optimization:
 
 ```bash
-python3 reproduce.py --audit-only
+python3 reproduce_full_state.py --audit-only
 ```
 
-`REPRODUCTION_CHECKS.json` states what was actually reconstructed. Replay uses
-only this directory, Python, NumPy, SciPy and the standard library. There is no
-network access during replay. Installing dependencies is a separate step.
+The original `benchmark.py`, `reproduce.py`, test data and reference results from
+v1.0.1 remain unchanged. `python3 reproduce.py` still performs the original
+fixed-storage replay. The v1.0.1 public release and archive remain immutable.
+`FULL_STATE_REPRODUCTION_CHECKS.json` documents the complete new isolated replay;
+`REPRODUCTION_CHECKS.json` documents the original sub-replay. Costs and exact
+certificates are compared; elapsed times are observations that vary on replay.
+
+## New in v1.1.0: Taylor including storage
+
+`full_state.py` forms `px*x + py*y + pv*v + k`, including the ordinary storage
+Taylor derivative. It certifies this prescribed form over exactly the same
+boxes and initial MILPs as v1.0.1. This derivative itself is standard calculus;
+the point is retaining uniform lower-bound validity for the more informative
+form. The error remains convex in turbine flow at fixed other coordinates.
+At each flow endpoint it separates into quadratics in spill and storage.
+Endpoint and clipped stationary-point evaluation therefore uses at most 8, 12,
+and 12 candidates for the three synthetic plant curvature patterns. A generic
+family with both concave spill and concave storage sections could require 18;
+we do not claim twelve for all coefficients.
+
+The original production monotonicity does not imply error monotonicity once
+`pv` is included. `interior_volume_witness.json` gives an independent synthetic
+Baygorria-type curvature example in which both volume endpoints have negative
+error but the interior maximum is positive. Omitting that state candidate would
+produce an invalid certificate. It contains synthetic coefficients, not an
+additional real Río Negro trajectory or coefficient set.
+
+Three complete full-state certificates use identical forms, anchors and boxes:
+componentwise Hessian remainder, centered cubic subdivision (4 by 4 by 2), and
+exact rational candidates. Shifts round upward and the final exported intercept
+rounds downward; an independent completed-square calculation checks the actual
+rounded rows, including `pv`. `results/full_state/metrics.csv` also reports paired
+scheduled and final economic differences from the original fixed-storage
+candidate LP. No configuration is selected from these comparisons. The cases
+were already inspected; these are retrospective verification examples, not new
+independent statistical validation or an out-of-distribution test.
 
 ## Model and data
 
@@ -122,7 +149,7 @@ general theorem does not promise closed-form roots for every smooth function.
 
 This is an independently distributable verification example, not a replacement
 for the 10,000-case real-bank evaluation or a claim of operational realism.
-No public hosting location or persistent DOI is asserted by creating this package.
+Public releases are hosted at https://github.com/MathiasRodriguezCastro/rio-negro-certified-repair-benchmark/releases . A persistent DOI remains pending.
 The official dependency interfaces are documented at
 [SciPy linprog](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html)
 and [SciPy milp](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.milp.html).

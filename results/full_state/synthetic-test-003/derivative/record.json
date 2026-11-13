@@ -1,0 +1,25 @@
+{
+  "construction_s": 0.016858574000252702,
+  "solver": {
+    "success": true,
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "assembly_s": 0.0007653759998902387,
+    "solve_s": 0.0033988979998866853,
+    "procedure_s": 0.004164839999702963,
+    "objective": -6259.384778004303
+  },
+  "point_audit": {
+    "passed": true,
+    "mass_residual": 2.1094237467877974e-15,
+    "technical_residual": 0.0,
+    "affine_residual": 8.43769498715119e-15,
+    "domain_residual": 0.0,
+    "credit_residual": 4.440892098500626e-16,
+    "unsupported_service": 0.0,
+    "hidden_energy": 0.0,
+    "scheduled_cost": -4.478078833360769,
+    "final_cost": -4.478078833360769,
+    "final_credit_energy": 0.0
+  }
+}
