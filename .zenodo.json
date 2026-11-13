@@ -1,7 +1,7 @@
 {
   "title": "Synthetic certified hydropower repair benchmark",
   "upload_type": "software",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publication_date": "2026-11-13",
   "description": "Independent synthetic benchmark accompanying Certified Affine Production Bounds for Local Hydropower Schedule Repair in the Rio Negro Cascade. Includes three development cases and twelve fixed verification examples, generated inputs and initial MILP witnesses, exact-rational certificate checks and open-source replay of 192 LP solves. New coefficients retain the same polynomial family; no restricted real-bank inputs or inherited native code are included. The protocol records an implementation correction and does not claim prospectively untouched statistical validation.",
   "creators": [
@@ -10,7 +10,7 @@
       "affiliation": "Facultad de Ingenieria, Universidad de la Republica, Uruguay"
     }
   ],
-  "license": "MIT",
+  "license": "mit",
   "access_right": "open",
   "keywords": [
     "hydropower scheduling",

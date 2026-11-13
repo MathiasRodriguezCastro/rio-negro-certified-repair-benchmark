@@ -6,7 +6,7 @@ authors:
   - family-names: "Rodriguez Castro"
     given-names: "Mathias"
     affiliation: "Facultad de Ingenieria, Universidad de la Republica, Uruguay"
-version: "1.0.0"
+version: "1.0.1"
 date-released: "2026-11-13"
 license: MIT
 abstract: >-
