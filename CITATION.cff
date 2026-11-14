@@ -6,14 +6,14 @@ authors:
   - family-names: "Rodriguez Castro"
     given-names: "Mathias"
     affiliation: "Facultad de Ingenieria, Universidad de la Republica, Uruguay"
-version: "1.1.0"
+version: "1.2.0"
 date-released: "2026-11-13"
 license: MIT
 abstract: >-
   Independent synthetic examples for certified affine hydropower repair and
   repeated linear coordination. Includes generated scenarios, full initial
   MILP witnesses, three certified bounds, raw LP results, exact-rational
-  checks and 228-LP open-source replay. It uses the same polynomial family
+  checks and 232-LP open-source replay, including a complete outer-bound example. It uses the same polynomial family
   with independent coefficients; it does not reproduce the restricted
   10000-case Rio Negro study or benchmark other production-function families.
 keywords:

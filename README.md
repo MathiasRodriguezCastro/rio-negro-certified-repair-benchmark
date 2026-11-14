@@ -1,4 +1,4 @@
-# Synthetic certified hydropower repair benchmark v1.1.0
+# Synthetic certified hydropower repair benchmark v1.2.0
 
 This MIT-licensed standalone package accompanies *Certified Affine Production
 Bounds for Local Hydropower Schedule Repair in the Río Negro Cascade*. Code,
@@ -6,6 +6,29 @@ inputs and initial MILP witnesses are independently written or synthetically
 generated. No Río Negro coefficients, real-bank scenarios, inherited native
 classes, network weights or proprietary solvers are distributed here.
 Third-party dependencies retain their own licenses.
+
+## New in v1.2.0: complete global-bound certificate
+
+The additional [24-period example](global_bounds_example/README.md) provides all
+input data, upper production planes, three rational outer LPs, dual residual
+corrections and both exact feasible reference points. A separately written
+verifier proves each upper plane on its entire box using rational Bernstein
+coefficients, reconstructs the model, and checks the dual and hydraulic witness.
+It runs with the Python standard library alone:
+
+```bash
+python3 -S verify_global_bounds_demo.py
+python3 reproduce_global_bounds.py  # repeats 4 open-source LPs
+python3 reproduce_all.py            # all 232 LPs, including the retained 228
+```
+
+All v1.1.0 scientific files and earlier release archives are retained unchanged.
+This synthetic example demonstrates the global-bounding procedure; it does not
+redistribute or independently recreate the restricted real-bank inputs. Its
+optimum is the continuous reference optimum within fixed local boxes. Normalized
+gap caps use the all-demand failure penalty, not optimal operating cost.
+
+## Retained v1.1.0 replay
 
 ```bash
 python3 -m pip install -r requirements.txt

@@ -1,0 +1,27 @@
+{
+  "version": "1.2.0",
+  "recorded_at": "2026-11-14T01:23:02.758349+00:00",
+  "sha256": {
+    "global_bounds_demo.py": "9cc37aa2b02c5a3ef3534a5ad5b64696c0107aa582055430470e6a4a9108359f",
+    "verify_global_bounds_demo.py": "e1471654bc275de54896be70e5d551fb94e6741b4a29d66aa8446129589e6d18",
+    "test_global_bounds_demo.py": "f8f58aad7653be9c94504af32429a394b67924e2ed2027c16d2e26601ea13d6d",
+    "global_bounds_example/input.json": "62adca75ff59adc07f3a02d5df016bdf5645c8d9c0430310dd410d0ba2796238",
+    "global_bounds_example/certificate.json": "974fd523d7b653f087177bf718e07271cc7f11bba45241977ecd6f5203cf754c"
+  },
+  "scope": "Fixed mathematical reproducibility example, constructed and checked before release; not a prospectively untouched sample.",
+  "inputs": "New rational normalized data, independent production coefficients, explicit constant-storage hydraulic anchor; no restricted real-bank data.",
+  "construction": "Three accumulated outer LP rounds; one certified inner LP; exact feasible scheduled/final realizations.",
+  "independent_verification": "Standard-library-only Bernstein whole-box proof of every actual upper plane, physical matrix reconstruction, rational dual residual and both feasible reference points.",
+  "radii": {
+    "r": "1/50",
+    "m": "1/50"
+  },
+  "horizon": 24,
+  "delays": [
+    8,
+    16
+  ],
+  "whole_box_proof_maximum_bisection_depth": 12,
+  "normalization": "All-demand failure penalty, not optimal operating cost or maximum attainable economic saving",
+  "original_version_1_1_0_scientific_payload_unchanged": true
+}
